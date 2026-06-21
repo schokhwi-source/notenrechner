@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notenrechner</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="calculator">
+            <div class="display">
+                <div class="average-label">Durchschnitt</div>
+                <div class="average-value" id="average-value">-</div>
+                <div class="grades-list" id="grades-list">Keine Noten eingegeben</div>
+            </div>
+            
+            <div class="keypad">
+                <button class="btn note-btn" data-note="1">1</button>
+                <button class="btn note-btn" data-note="2">2</button>
+                <button class="btn note-btn" data-note="3">3</button>
+                <button class="btn note-btn" data-note="4">4</button>
+                <button class="btn note-btn" data-note="5">5</button>
+                <button class="btn note-btn" data-note="6">6</button>
+                <button class="btn action-btn" id="undo-btn">Zurück</button>
+                <button class="btn action-btn danger" id="clear-btn">Löschen</button>
+            </div>
+            
+            <div class="options">
+                <label class="toggle-label">
+                    <input type="checkbox" id="sound-toggle" checked>
+                    <span class="toggle-text">Tastenton</span>
+                </label>
+                <button id="help-btn" class="icon-btn-inline" title="Anleitung">?</button>
+            </div>
+        </div>
+    </div>
+    <div id="help-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal">&times;</span>
+            <h2>Anleitung</h2>
+            <ul>
+                <li><strong>Noten eingeben:</strong> Klicke auf die Tasten 1-6 oder nutze die Zahlen auf deiner Tastatur.</li>
+                <li><strong>Durchschnitt:</strong> Wird bei jeder Eingabe sofort automatisch berechnet.</li>
+                <li><strong>Zurück:</strong> Entfernt die zuletzt eingegebene Note (Tastatur: <i>Backspace</i>).</li>
+                <li><strong>Löschen:</strong> Setzt den gesamten Rechner zurück (Tastatur: <i>Delete</i> oder <i>Escape</i>).</li>
+                <li><strong>Tastenton:</strong> Schaltet das Klickgeräusch ein oder aus.</li>
+            </ul>
+            <p class="credits" style="margin-top: 24px; font-size: 0.8rem; color: var(--text-secondary); text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 16px;">
+                Erstellt durch Antigravity (Gemini 3.1 Pro) am 02.05.2026.
+            </p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
